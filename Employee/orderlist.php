@@ -13,8 +13,8 @@ if (!is_user()) {
 
 <?php
  $user = $_SESSION['username'];
-$usid = $pdo->query("SELECT id FROM users WHERE username='".$user."'");
-$usid = $usid->fetch(PDO::FETCH_ASSOC);
+ $usid = $pdo->query("SELECT id FROM users WHERE username='".$user."'");
+ $usid = $usid->fetch(PDO::FETCH_ASSOC);
  $uid = $usid['id'];
  include ('header.php');
 
