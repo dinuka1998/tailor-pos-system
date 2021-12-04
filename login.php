@@ -46,7 +46,7 @@
                   <h3 class="text-center">VIPULA TAILOR SHOP</h3>
                   <h2 class="text-center">Login</h2>
                   <p>You can login  here.</p>
-                  <a class="btn btn-primary btn-lg" href="Student/login.php" role="button">CUSTOMER</a>
+                  <a class="btn btn-primary btn-lg" href="Employee/CustomerLogin.php" role="button">CUSTOMER</a>
                   <a class="btn btn-primary btn-lg" href="Employee/index.php" role="button">EMPLOYEE</a>
                   
                   <div class="panel-body">

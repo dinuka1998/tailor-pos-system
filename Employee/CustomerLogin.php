@@ -29,8 +29,8 @@ if (is_user()) {
 <style>
 
 .pass {
-width: 100%;
-height: 50px;
+    width: 100%;
+    height: 50px;
 }
 body{
     background:#00c2a5;
@@ -57,7 +57,7 @@ body{
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>ADMIN </strong> Login</h1>
+                            <h1><strong>Customer </strong> Login</h1>
                         </div>
                     </div>
                     <div class="row">
@@ -65,8 +65,8 @@ body{
                         <div class="col-md-6 col-md-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Sign In</h3>
-                            		<p>Fill in the form below to get instant access:</p>
+                        			<h4>Sign In</h4>
+                            		
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-user"></i>
@@ -86,12 +86,12 @@ body{
 								
 								<form role="form" action="signin_post.php" method="post" class="registration-form">
 								
-<div class="form-group">
-<input type="text" name="username" value="admin" class="form-first-name form-control">
-</div>
-<div class="form-group">
-<input type="password" name="password" value="admin" class="pass form-control">
-</div>
+                                <div class="form-group">
+                                <input type="text" name="username" value="admin" class="form-first-name form-control">
+                                </div>
+                                <div class="form-group">
+                                <input type="password" name="password" value="admin" class="pass form-control">
+                                </div>
 
 			                        <button type="submit" class="btn"> Submit</button>
 			                    </form>
