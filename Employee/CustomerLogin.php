@@ -96,6 +96,7 @@ body{
 			                        <button type="submit" class="btn"> Submit</button>
 			                    </form>
 		                    </div>
+                            If you dont have an account <a href="CustomerSignUp.php">SignUp </a>
                         </div>
                     </div>
                 </div>
