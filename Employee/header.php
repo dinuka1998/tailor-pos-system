@@ -124,7 +124,7 @@ h1 {
         
         <li><a href="customeradd.php"><i class="fa fa-user"></i><span>Add Customer</span></a></li>
         <li><a href="customerview.php"><i class="fa fa-th-list"></i><span>View/Edit Customer</span></a></li>
-
+        <li><a href="MessagesIndex.php"><i class="fa fa-th-list"></i><span>Customer Messages</span></a></li>
        <!-- <li><a href="smslist.php"><i class="fa fa-envelope-o"></i><span>SENT MESSAGES</span></a></li> -->
 
 
