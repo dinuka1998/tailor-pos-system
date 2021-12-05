@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,15 +38,15 @@
                         <span class="posted_in"> <strong>Categories:</strong> <a rel="tag" href="#">Jackets</a>, <a rel="tag" href="#">Men</a>, <a rel="tag" href="#">Shirts</a>, <a rel="tag" href="#">T-shirt</a>.</span>
                         <span class="tagged_as"><strong>Tags:</strong> <a rel="tag" href="#">mens</a>, <a rel="tag" href="#">womens</a>.</span>
                     </div>
-                    <div class="m-bot15"> <strong>Price : </strong> <span class="amount-old">$544</span> <span class="pro-price"> $300.00</span></div>
-                    <div class="form-group row">
+                    <!-- <div class="m-bot15"> <strong>Price : </strong> <span class="amount-old">$544</span> <span class="pro-price"> $300.00</span></div> -->
+                    <!-- <div class="form-group row">
                         <label for="quantiy" class="col-sm-2 col-form-label">Quantity</label>
                         <div class="col-sm-10">
                             <input type="quantiy" class="form-control" id="quantiy" placeholder="1">
                         </div>
-                    </div>
+                    </div> -->
                     <p>
-                        <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Make an appoinment</button>
                     </p>
                 </div>
             </div>

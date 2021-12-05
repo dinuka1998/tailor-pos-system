@@ -20,7 +20,7 @@ include("customernav.php");
 </head>
 
 <body>
-<li><a href="signout.php"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+
     <div class="container">
         <div class="username">
 
@@ -49,7 +49,7 @@ include("customernav.php");
             </div>
 
             <div class="col-md-4 col-xl-4">
-                <a href="page.html">
+                <a href="productList.php">
                     <div class="card bg-c-yellow order-card">
                         <div class="card-block">
                             <h2 class="text-center "><i class="fas fa-calendar-check btn-icon"></i></i><span>Appointments</span></h2>

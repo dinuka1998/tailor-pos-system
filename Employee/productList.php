@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +30,7 @@
                     <section class="panel">
                         <div class="pro-img-box">
                             <img src="./assets/img/garments/suite-1.jpg" alt="" />
-                            <a href="#" class="adtocart">
+                            <a href="singleProduct.php" class="adtocart">
                                 <i class="fas fa-cart-arrow-down"></i>
                             </a>
                         </div>

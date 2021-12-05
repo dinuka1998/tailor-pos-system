@@ -1,4 +1,12 @@
-  <!-- Google Fonts -->
+ <?php
+ function is_cust()
+ {
+   if (isset($_SESSION['cid']))
+     return true;
+ }
+  
+ ?>
+ <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -48,7 +56,26 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
 
-      <a href="./login.php" class="get-started-btn scrollto">LOGIN</a>
+      <?php 
+
+        if(is_cust()){
+
+          ?>
+
+<a href="signout.php" class="get-started-btn scrollto">SIGN OUT</a>
+          <?php
+
+        }else{
+          ?>
+           <a href="../login.php" class="get-started-btn scrollto">LOGIN</a>
+
+          <?php
+        }
+
+      ?>
+      <!-- <a href="../login.php" class="get-started-btn scrollto">LOGIN</a>
+
+      <a href="signout.php"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a> -->
 
     </div>
   </nav>
