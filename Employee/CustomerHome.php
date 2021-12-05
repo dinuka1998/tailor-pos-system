@@ -2,7 +2,10 @@
 <html lang="en">
 <?php 
 session_start();
-echo('Customer ID: '. $_SESSION['cid']); ?>
+echo('Customer ID: '. $_SESSION['cid']); 
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +18,7 @@ echo('Customer ID: '. $_SESSION['cid']); ?>
 </head>
 
 <body>
+<li><a href="signout.php"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
     <div class="container">
         <div class="username">
 
