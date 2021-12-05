@@ -36,7 +36,7 @@ echo('Customer ID: '. $_SESSION['cid']);
             </div>
 
             <div class="col-md-4 col-xl-4">
-                <a href="page.html">
+                <a href="MessagesIndex.php">
                     <div class="card bg-c-green order-card">
                         <div class="card-block">
                             <h2 class="text-center "><i class="fas fa-envelope btn-icon"></i><span>Masseges</span></h2>
