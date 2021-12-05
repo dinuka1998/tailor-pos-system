@@ -8,6 +8,22 @@
   
   ?>
 <style> 
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 10px;
+}
+.message-body{
+  margin-left: 600px;
+}
 textarea {
   width: 40%;
   height: 100px;
@@ -20,7 +36,7 @@ textarea {
   resize: none;
 }
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #1abc9c;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -43,11 +59,12 @@ input[type=submit]:hover {
 .message-model{
   background-color: #ededed;
   width: 40%;
-  height: 600px;
+  height: 500px;
   padding: 10px;
   margin-left: 40px;
   margin-bottom: 20px;
   margin-top: 50px;
+  border-radius: 5px;
 }
 .messeage-box{
   margin-left: 40px;
@@ -60,11 +77,15 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
+<div class="header">
+  <h1>Messages</h1>
+
+</div>
 <div class='message-body'>
  
 
   
-  <div class='message-model'>
+  <div class='column message-model'>
   <?php 
   dbconnect();
   $MessegeBody = $pdo->query("SELECT body FROM messages");
