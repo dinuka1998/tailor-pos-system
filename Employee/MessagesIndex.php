@@ -68,19 +68,17 @@ input[type=submit]:hover {
   <?php 
   dbconnect();
   $MessegeBody = $pdo->query("SELECT body FROM messages");
-  $MessegeBody = $MessegeBody->fetch(PDO::FETCH_ASSOC);
-  $message = $MessegeBody['body'];
   
-  foreach ($MessegeBody as $body ) {
+  while($row = $MessegeBody->fetch(PDO::FETCH_ASSOC)) {
     ?>
     <div class='message-card'>
-      <?php echo($message); ?>
+      <?php echo($row["body"]); ?>
     </div>
-      
-  <?php 
-    }
+  <?php
+  }
 
   ?>
+ 
   </div>
   <div class='messeage-box'>
     <form action="MessageSubmit.php" method="post" >
