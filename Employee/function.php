@@ -73,7 +73,27 @@ function username_exists($username)
 	$stmt->execute( array('username' => $username) );
 	return $stmt->fetchColumn();
 }
+function attemptCus($email, $password)
+{
+	global $pdo;
+	
+	$stmt = $pdo->prepare('
+		SELECT id, fullname
+		FROM customer
+		WHERE email = :email AND password = :password
+		LIMIT 1');
 
+	$stmt->execute(array(':email' => $email, 'password' => $password));
+
+	if ($data = $stmt->fetch( PDO::FETCH_OBJ )) {
+		# set session
+		$_SESSION['username'] = $data->username;
+		$_SESSION['cid'] = $data->id;
+		return true;
+	} else {
+		return false;
+	}
+}
 function attempt($username, $password)
 {
 	global $pdo;

@@ -84,10 +84,10 @@ body{
                                 <?php endif ?>
 								
 								
-								<form role="form" action="signin_post.php" method="post" class="registration-form">
+								<form role="form" action="CustomerSigninController.php" method="post" class="registration-form">
 								
                                 <div class="form-group">
-                                <input type="text" name="username" value="admin" class="form-first-name form-control">
+                                <input type="email" name="email" value="admin" class="form-first-name form-control">
                                 </div>
                                 <div class="form-group">
                                 <input type="password" name="password" value="admin" class="pass form-control">
