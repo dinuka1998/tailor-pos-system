@@ -116,7 +116,8 @@ h1 {
 	  
         <li><a href="#"><i class="fa fa-leaf"></i> <span>HOME</span></a></li>
         <li><a href="#"><i class="fa fa-cog"></i> <span>My Account</span></a></li>
-        <li><a href="#"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
+        <!-- <li><a href="#"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li> -->
+        <li><a href="appoinments.php"><i class="fa fa-calendar"></i><span>Appoinments</span></a></li>
 		
     	<li><a href="orderadd.php"><i class="fa fa-shopping-cart"></i><span>Add Order</span></a></li>
         <li><a href="orderlist.php"><i class="fa fa-th-list"></i><span>View/Edit Orders</span></a></li>
@@ -130,6 +131,7 @@ h1 {
 	 <li><a href="#"><i class="fa fa-envelope"></i><span>SENT EMAILS</span></a></li>
    <li><a href="#"><i class="fa fa-user"></i><span>Add Staff</span></a></li>
         <li><a href="#"><i class="fa fa-eye"></i><span>View/Edit Staff</span></a></li>
+       
         
        <!-- <li class="nav-parent"><a href="#"><i class="fa fa-th-list"></i> <span>Staff Management</span></a>
           <ul class="children">

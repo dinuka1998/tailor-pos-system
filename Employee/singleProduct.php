@@ -1,6 +1,10 @@
 <?php 
+require_once('function.php');
+dbconnect();
 session_start();
+$product_id = $_GET["prodcut"];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,27 +20,59 @@ session_start();
 
 <body>
 
-    <?php include("customernav.php"); ?>
+    <?php 
+    include("customernav.php"); 
+    $products = $pdo->query("SELECT * FROM product WHERE product_id='" . $product_id . "'");
+    $products = $products->fetch(PDO::FETCH_ASSOC);
+    $product_name = $products['product'];
+    $product_image = $products['image'];
+    $product_description = $products['description'];
+    $product_categories = $products['categories'];
+    $product_Tags = $products['Tags'];
+
+    $tag_Array = explode(',', $product_Tags);
+    $cat_Array = explode(',', $product_categories);
+
+    
+    ?>
 
     <div class="container bootdey">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6 image-area">
                     <div class="pro-img-details">
-                        <img src="./assets/img/garments/suite-1.jpg" alt="" />
+                        <img src="./assets/img/garments/<?php echo($product_image); ?>" alt="" />
                     </div>
                 </div>
                 <div class="col-md-6 details-area">
                     <h4 class="pro-d-title">
-                        Gray blazer with glen check pattern
+                        <?php echo($product_name); ?>
 
                     </h4>
                     <p>
-                        Burgundy chinos in 100% cotton, woven in durable twill weave. The chinos have a metal zipper fly, straight side pockets and one back vent pocket. Add a personal touch by embroider your initials on these chinos. Made to your measurements.
+                    <?php echo($product_description); ?>
                     </p>
                     <div class="product_meta">
-                        <span class="posted_in"> <strong>Categories:</strong> <a rel="tag" href="#">Jackets</a>, <a rel="tag" href="#">Men</a>, <a rel="tag" href="#">Shirts</a>, <a rel="tag" href="#">T-shirt</a>.</span>
-                        <span class="tagged_as"><strong>Tags:</strong> <a rel="tag" href="#">mens</a>, <a rel="tag" href="#">womens</a>.</span>
+                        <span class="posted_in"> <strong>Categories:</strong> 
+                        <?php 
+                            foreach ($cat_Array as $item) {
+                                ?>
+                                <a rel="tag" href="#"><?php echo($item); ?>,</a>
+                                <?php
+                            }
+                        ?>
+                         
+                    
+                        </span>
+                        <span class="tagged_as"><strong>Tags:</strong> 
+                        
+                        <?php 
+                            foreach ($tag_Array as $item) {
+                                ?>
+                                <a rel="tag" href="#"><?php echo($item); ?></a>,
+                                <?php
+                            }
+                        ?>
                     </div>
                     <!-- <div class="m-bot15"> <strong>Price : </strong> <span class="amount-old">$544</span> <span class="pro-price"> $300.00</span></div> -->
                     <!-- <div class="form-group row">
@@ -46,7 +82,7 @@ session_start();
                         </div>
                     </div> -->
                     <p>
-                        <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Make an appoinment</button>
+                       <a href="customerappoinment.php"> <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Make an appoinment</button> </a> 
                     </p>
                 </div>
             </div>

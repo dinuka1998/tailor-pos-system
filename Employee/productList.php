@@ -1,5 +1,8 @@
 <?php 
+require_once('function.php');
+dbconnect();
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +21,9 @@ session_start();
 
 <body>
 
-    <?php include("customernav.php"); ?>
+    <?php 
+    include("customernav.php"); 
+    ?>
 
     <div class="container bootdey">
         <div class="page-title">
@@ -26,253 +31,39 @@ session_start();
         </div>
         <div class="col-md-12">
             <div class="row product-list">
+
+            <?php
+
+$ddaa = $pdo->query("SELECT product_id, product, image FROM `product`");
+while ($data = $ddaa->fetch(PDO::FETCH_ASSOC)) {
+ 
+?>
+
+
                 <div class="col-md-3">
                     <section class="panel">
                         <div class="pro-img-box">
-                            <img src="./assets/img/garments/suite-1.jpg" alt="" />
-                            <a href="singleProduct.php" class="adtocart">
+                            <img src="./assets/img/garments/<?php echo($data['image']) ?>" alt="" />
+                            <a href="singleProduct.php?prodcut=<?php echo($data['product_id']) ?>" class="adtocart">
                                 <i class="fas fa-cart-arrow-down"></i>
                             </a>
                         </div>
 
                         <div class="panel-body text-center">
                             <h4>
-                                <a href="#" class="pro-title">
-                                    Gray blazer with glen check pattern
+                                <a href="singleProduct.php?prodcut=<?php echo($data['product_id']) ?>" class="pro-title">
+                                <?php echo($data['product']) ?>
                                 </a>
                             </h4>
-                            <p class="price">$300.00</p>
+                        
                         </div>
                     </section>
                 </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/suite-2.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
+<?php
+}
+?>
 
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Heavy wool blazer in gray melange fishbone weave
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/suite-3.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
 
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Three-piece suit in gray with a classic check pattern
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/suite-4.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Two-piece blue suit in houndstooth weave
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/suite-5.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Two-piece classic tuxedo in black fine twill
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/polo-1.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    White short-sleeved polo shirt
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/polo-2.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Black short-sleeved polo shirt
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/polo-3.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Emerald green long-sleeved polo shirt
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/polo-4.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Navy long-sleeved polo shirt
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/pant-1.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Navy stretch chinos
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/pant-2.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Rust chinos
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/pant-3.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Burgundy chinos
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-md-3">
-                    <section class="panel">
-                        <div class="pro-img-box">
-                            <img src="./assets/img/garments/pant-4.jpg" alt="" />
-                            <a href="#" class="adtocart">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </a>
-                        </div>
-
-                        <div class="panel-body text-center">
-                            <h4>
-                                <a href="#" class="pro-title">
-                                    Dark green shorts
-                                </a>
-                            </h4>
-                            <p class="price">$300.00</p>
-                        </div>
-                    </section>
-                </div>
             </div>
         </div>
     </div>
