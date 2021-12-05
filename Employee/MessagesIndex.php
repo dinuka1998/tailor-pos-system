@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php 
+  session_start();
+  include("customernav.php");
+  require_once('function.php');
+  
+  ?>
 <style> 
 textarea {
   width: 40%;
@@ -26,31 +32,66 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+.message-card{
+  background-color: #ccc;
+  width: 30%;
+  height: 50px;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
+}
+.message-model{
+  background-color: #ededed;
+  width: 40%;
+  height: 600px;
+  padding: 10px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+.messeage-box{
+  margin-left: 40px;
+  width: 100%;
+}
+
+.send-button{
+  float: left;
+}
 </style>
 </head>
 <body>
+<div class='message-body'>
+ 
 
-<h2>Messages</h2>
+  
+  <div class='message-model'>
+  <?php 
+  dbconnect();
+  $MessegeBody = $pdo->query("SELECT body FROM messages");
+  $MessegeBody = $MessegeBody->fetch(PDO::FETCH_ASSOC);
+  $message = $MessegeBody['body'];
+  
+  foreach ($MessegeBody as $body ) {
+    ?>
+    <div class='message-card'>
+      <?php echo($message); ?>
+    </div>
+      
+  <?php 
+    }
 
-<?php 
-require_once('function.php');
-dbconnect();
-$MessegeBody = $pdo->query("SELECT body FROM messages");
-$MessegeBody = $MessegeBody->fetch(PDO::FETCH_ASSOC);
-$message = $MessegeBody['body'];
-
-foreach ($MessegeBody as $body ) {
-    
-}
-
-?>
-
-<form action="MessageSubmit.php" method="post">
-  <textarea name='message' placeholder="Type your message here..."></textarea>
-  <div class="row">
-    <input type="submit" value="Send">
+  ?>
   </div>
-</form>
-
+  <div class='messeage-box'>
+    <form action="MessageSubmit.php" method="post" >
+      <div >
+      <textarea name='message' placeholder="Type your message here..."></textarea>
+      </div>
+      <div class=" send-button">
+        <input type="submit" value="Send">
+      </div>
+      </form>
+  </div>
+</div>
 </body>
 </html>
