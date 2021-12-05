@@ -2,9 +2,11 @@
 <html lang="en">
 <?php 
 session_start();
-echo('Customer ID: '. $_SESSION['cid']); 
-
+// echo('Customer ID: '. $_SESSION['cid']); 
+include("customernav.php");
 ?>
+
+
 
 <head>
     <meta charset="UTF-8">
@@ -25,7 +27,7 @@ echo('Customer ID: '. $_SESSION['cid']);
         </div>
         <div class="row btn-container">
             <div class="col-md-4 col-xl-4">
-                <a href="page.html">
+                <a href="customerorder.php">
                     <div class="card bg-c-blue order-card">
                         <div class="card-block">
                             <h2 class="text-center "><span><i class="fas fa-shopping-cart btn-icon"></i>Orders</span></h2>

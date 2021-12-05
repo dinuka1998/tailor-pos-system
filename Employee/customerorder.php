@@ -15,8 +15,8 @@ session_start();
 
 <?php
 $user = $_SESSION['username'];
-// $custid = $_SESSION['cid'];
-$custid = 1;
+$custid = $_SESSION['cid'];
+// $custid = 1;
 $usid = $pdo->query("SELECT id FROM users WHERE username='" . $user . "'");
 $usid = $usid->fetch(PDO::FETCH_ASSOC);
 $uid = $usid['id'];
