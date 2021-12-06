@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+
+.form-container{
+   
+    
+}
+
+.form-title{
+    text-align: center !important;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.background{
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
