@@ -95,7 +95,9 @@ body{
 
 			                        <button type="submit" class="btn"> Submit</button>
 			                    </form>
+                                
 		                    </div>
+                            <a href="../" style="color: black;font-size: 18px;"> back </a>
                         </div>
                     </div>
                 </div>

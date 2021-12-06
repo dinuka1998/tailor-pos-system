@@ -5,6 +5,17 @@ if (file_get_contents('function.php') == '') {
 require_once('function.php');
 session_start();
 
+function is_custm()
+{
+  if (isset($_SESSION['cid']))
+    return true;
+}
+
+if (is_custm()) {
+	redirect('CustomerHome.php');
+}
+
+
 if (is_user()) {
 	redirect('orderlist.php');
 }
