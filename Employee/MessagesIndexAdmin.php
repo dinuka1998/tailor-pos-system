@@ -124,7 +124,7 @@ input[type=submit]:hover {
  
   </div>
   <div class='messeage-box'>
-    <form action="MessageSubmit.php" method="post" >
+    <form action="MessageSubmitAdmin.php" method="post" >
       <div >
       <textarea name='message' placeholder="Type your message here..."></textarea>
       </div>
