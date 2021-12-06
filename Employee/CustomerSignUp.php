@@ -73,6 +73,12 @@ Customer Added Successfully!
     width: 800px;
 
   }
+
+  .signup-text {
+            color: black;
+            font-size: 15px;
+            text-align: center;
+        }
 </style>
 
 <body>
@@ -98,7 +104,9 @@ Customer Added Successfully!
               <input type="submit" value="Submit">
             </form>
           </div>
+          <div class="signup-text"> If you already have an account <a href="CustomerLogin.php" style="color:#007bff;text-decoration: none;">LogIn </a> </div>
         </div>
+       
       </div>
 
     </div>
