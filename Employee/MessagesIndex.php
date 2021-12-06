@@ -22,6 +22,7 @@ body {
   font-size: 10px;
 }
 .message-body{
+  
   margin-left: 600px;
 }
 textarea {
@@ -50,21 +51,27 @@ input[type=submit]:hover {
 }
 .message-card{
   background-color: #ccc;
-  width: 30%;
-  height: 50px;
-  padding: 15px;
-  margin: 20px;
-  border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+}
+
+.message-text{
 }
 .message-model{
   background-color: #ededed;
-  width: 40%;
-  height: 500px;
-  padding: 10px;
-  margin-left: 40px;
-  margin-bottom: 20px;
-  margin-top: 50px;
-  border-radius: 5px;
+    width: 40%;
+    height: 500px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow-x: clip;
 }
 .messeage-box{
   margin-left: 40px;
@@ -93,7 +100,7 @@ input[type=submit]:hover {
   while($row = $MessegeBody->fetch(PDO::FETCH_ASSOC)) {
     ?>
     <div class='message-card'>
-      <?php echo($row["body"]); ?>
+       <span class='message-text'><?php echo($row["body"]); ?> </span>
     </div>
   <?php
   }
