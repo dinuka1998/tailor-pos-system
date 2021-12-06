@@ -35,6 +35,10 @@ if (is_user()) {
 body{
     background:#00c2a5;
 }
+.signup-text{
+    color:black;
+    font-size: 15px;
+}
 </style>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -65,7 +69,7 @@ body{
                         <div class="col-md-6 col-md-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h4>Sign In</h4>
+                        			<h4 style="color:white">Sign In</h4>
                             		
                         		</div>
                         		<div class="form-top-right">
@@ -87,16 +91,16 @@ body{
 								<form role="form" action="CustomerSigninController.php" method="post" class="registration-form">
 								
                                 <div class="form-group">
-                                <input type="email" name="email" value="admin" class="form-first-name form-control">
+                                <input type="email" name="email" value="admin" class="form-first-name form-control" placeholder="Enter your email here..">
                                 </div>
                                 <div class="form-group">
-                                <input type="password" name="password" value="admin" class="pass form-control">
+                                <input type="password" name="password" value="admin" class="pass form-control" placeholder="Enter your password here..">
                                 </div>
 
 			                        <button type="submit" class="btn"> Submit</button>
 			                    </form>
 		                    </div>
-                            If you dont have an account <a href="CustomerSignUp.php">SignUp </a>
+                            <div class="signup-text">  If you dont have an account <a href="CustomerSignUp.php" style="color:red">SignUp </a> </div>   
                         </div>
                     </div>
                 </div>
