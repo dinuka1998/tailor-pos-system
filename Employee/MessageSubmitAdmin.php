@@ -10,7 +10,7 @@ if($_POST)
     $res = $pdo->exec("INSERT INTO messages SET body='".$Message."',type = 2");
     $cid = $pdo->lastInsertId();
     if($res){
-        header( "Location: MessagesIndex.php" );  
+        header( "Location: MessagesIndexAdmin.php" );  
     }
 
 } 
