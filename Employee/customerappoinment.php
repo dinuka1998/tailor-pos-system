@@ -4,7 +4,16 @@ dbconnect();
 session_start();
 // echo('Customer ID: '. $_SESSION['cid']); 
 include("customernav.php");
+
+
+if (!is_cust()) {
+	redirect('CustomerSignUp.php');
+}
+
+
 $custid = $_SESSION['cid'];
+
+
 ?>
 
 <?php

@@ -7,6 +7,8 @@ if (!is_user()) {
 	redirect('index.php');
 }
 
+
+
 ?>
    
   
