@@ -50,6 +50,21 @@
         <li class="nav-item">
           <a class="nav-link" href="../contact.html">Contact</a>
         </li>
+
+        <?php 
+
+if(is_cust()){
+
+  ?>
+        <li class="nav-item">
+          <a class="nav-link" href="CustomerHome.php">Dashboard</a>
+        </li>
+
+        <?php
+        }
+
+      ?>
+
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search">

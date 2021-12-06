@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-session_start();
-// echo('Customer ID: '. $_SESSION['cid']); 
-include("customernav.php");
-?>
+
 
 
 
@@ -18,6 +14,12 @@ include("customernav.php");
     <link href="https://maxcdn.bootstrapcn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9874d4ab7b.js" crossorigin="anonymous"></script>
 </head>
+
+<?php 
+session_start();
+// echo('Customer ID: '. $_SESSION['cid']); 
+include("customernav.php");
+?>
 
 <body>
 
